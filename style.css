@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to bottom, #F0E5CF, white);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #F0E5CF;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  background-color: #ebebeb;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+#work {
+  background-color: #f4f4f4;
+}
+
+#work ul li a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.5s ease, font-size 0.5s ease;
+}
+
+#work ul li a:hover {
+  color: #333333;
+  font-size: 1.1em;
+}
+
+#contact {
+  background-color: #ffffff;
+}
+
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: color 0.5s ease;
+}
+
+nav ul li a:hover {
+  color: #bbbbbb;
+}
+
+main section {
+  padding: 40px;
+  margin: 20px;
+}
+
+main h1, main h2 {
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #F0E5CF;
+  color: #333;
+}
+
+#loadingScreen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #F0E5CF;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loader {
+  width: 70px;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(farthest-side,#000 90%,#0000) 0 0/8px 8px no-repeat,
+    conic-gradient(from -90deg at 30px 30px,#0000 90deg,#fff 0) 0 0/40px 40px ,
+    conic-gradient(from  90deg at 10px 10px,#0000 90deg,#fff 0) 0 0/40px 40px no-repeat,
+    conic-gradient(from -90deg at 30px 30px,#0000 90deg,#fff 0) 100% 100%/40px 40px no-repeat;
+  animation: l5 2s infinite;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  transition: font-size 0.5s ease;
+}
+
+.social-links a:hover {
+  font-size: 1.1em;
+}
+
+
+@keyframes l5 {
+  0%     {background-position:left 1px top 1px,0 0,0 0,100% 100%}
+  16.67% {background-position:left 50% top 1px,0 0,0 0,100% 100%}
+  33.33% {background-position:left 50% bottom 1px,0 0,0 0,100% 100%}
+  50%    {background-position:right 1px bottom 1px,0 0,0 0,100% 100%}
+  66.67% {background-position:right 1px bottom 50%,0 0,0 0,100% 100%}
+  83.33% {background-position:left 1px bottom 50%,0 0,0 0,100% 100%}
+  100%   {background-position:left 1px top 1px,0 0,0 0,100% 100%}
+}
