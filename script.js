@@ -4,5 +4,13 @@ window.addEventListener("load", function () {
     setTimeout(() => {
       document.getElementById("loadingScreen").style.display = "none";
     }, 500)
-  }, 2000);
+  }, 750);
+  const copyButtons = document.querySelectorAll(".scnx-copy-btn");
+
+  copyButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const text = button.dataset.text;
+      navigator.clipboard.writeText(text);
+    });
+  });
 });
